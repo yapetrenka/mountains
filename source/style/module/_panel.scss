@@ -1,0 +1,42 @@
+.panel {
+  border-radius: $border-radius-base;
+  overflow: hidden;
+  width: 380px;
+  &__content {
+    @extend %clearfix;
+    padding: $gutter*2 $gutter;
+    .panel_theme_transparent & {
+      background-color: rgba($light-color, .85);
+    }
+  }
+  &__actions {
+    &-list {
+      display: flex;
+    }
+    &-item {
+      flex: auto;
+    }
+    &-link {
+      @extend %btn;
+      background-color: rgba($primary-color, .85);
+      color: $light-color;
+      display: block;
+      position: relative;
+      width: 100%;
+      &:before {
+        background-color: rgba($bg-color-1, .4);
+        content: '';
+        height: 100%;
+        position: absolute;
+        left: 0;
+        width: 2px;
+        .panel__actions-item:first-child & {
+          display: none;
+        }
+      }
+      &:hover {
+        background-color: rgba($primary-color-dark, .85);
+      }
+    }
+  }
+}

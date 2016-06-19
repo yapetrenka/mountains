@@ -1,0 +1,21 @@
+.btn {
+  @extend %btn;
+  @extend %btn-ext;
+  &_primary {
+    background-color: $primary-color;
+    color: $light-color;
+    &:hover {
+      background-color: $primary-color-dark;
+    }
+  }
+  &_light {
+    background-color: transparent;
+    border: $btn-border-width solid $light-color;
+    color: $light-color;
+    line-height: $btn-height - ($btn-border-width*2);
+    &:hover {
+      background-color: $light-color;
+      color: $primary-color;
+    }
+  }
+}

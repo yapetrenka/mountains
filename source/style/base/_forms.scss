@@ -1,0 +1,97 @@
+.base-inp, .base-textarea, select {
+  @extend %form-element;
+}
+
+.base-textarea {
+  height: $textarea-height;
+  resize: none;
+  padding: $gutter $gutter;
+}
+
+.switch {
+  cursor: pointer;
+  .switches & {
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__inp {
+    display: none;
+    height: $input-checkbox-size;
+    width: $input-checkbox-size;
+  }
+  &__el {
+    background-color: $input-bg-color;
+    border: 1px solid rgba($dark-color, .2);
+    display: inline-block;
+    height: $input-checkbox-size;
+    margin-right: 10px;
+    position: relative;
+    vertical-align: middle;
+    width: $input-checkbox-size;
+    &:before {
+      content: '';
+      opacity: 0;
+      .switch__inp:checked + & {
+        opacity: 1;
+      }
+    }
+    &_radio {
+      border-radius: 50%;
+      &:before {
+        background-color: $primary-color;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
+        left: 5px;
+      }
+    }
+    &_checkbox {
+      border-radius: 2px;
+      &:before {
+        background: url(../img/icons/check.svg) no-repeat;
+        background-size: 100% auto;
+        content: '';
+        height: 9px;
+        position: absolute;
+        left: 3px;
+        top: 5px;
+        width: 12px;
+      }
+      .switch__inp:checked + & {
+        background-color: $primary-color;
+        border-color: $primary-color;
+      }
+    }
+  }
+  &__text {
+    vertical-align: middle;
+  }
+}
+
+.input-addon {
+  display: flex;
+  margin-bottom: $gutter;
+  &__item {
+    background-color: $bg-color-2;
+    border-radius: $border-radius-base 0 0 $border-radius-base;
+    position: relative;
+    width: 45px;
+  }
+  &__icon {
+    opacity: .2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__field {
+    border-radius: 0 $border-radius-base $border-radius-base 0;
+    flex: 1;
+    margin-bottom: 0;
+    position: relative;
+  }
+}

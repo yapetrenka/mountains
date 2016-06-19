@@ -1,0 +1,134 @@
+
+<!--+navigation('nav', ['Главная', 'Новости', "О компании", "Сравнение", 'Корзина'], 3)--><!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Loftschool builder</title>
+    <meta content="" name="author">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="./assets/css/foundation.css">
+    <link rel="stylesheet" href="./assets/css/app.css"><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+    <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
+    <![endif]-->
+    <div class="main-container welcome-page">
+      <div class="auth-top">
+        <button id="auth_flip" class="btn btn_light auth-top__btn">Авторизоваться</button>
+      </div>
+      <main class="main">
+        <div class="welcome">
+          <div class="welcome__front">
+            <div class="panel panel_theme_transparent">
+              <div class="panel__content">
+                <div class="person">
+                  <div class="person__ava"><img src="./assets/img/content/ava.jpg" class="person__img"></div>
+                  <div class="person__name">Петренко Ольга</div>
+                  <div class="person__content">Личный сайт веб разработчика</div>
+                </div>
+                <div class="welcome-social">
+                  <div class="social social_primary">
+                    <ul class="social__list">
+                      <li class="social__item"><a href="#" class="social__link">
+                          <svg class="icon svg-vk-dims social__icon">
+                            <use xlink:href="./assets/img/icons/sprite.svg#vk"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a href="#" class="social__link">
+                          <svg class="icon svg-github-dims social__icon">
+                            <use xlink:href="./assets/img/icons/sprite.svg#github"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a href="#" class="social__link">
+                          <svg class="icon svg-in-dims social__icon">
+                            <use xlink:href="./assets/img/icons/sprite.svg#in"></use>
+                          </svg></a></li>
+                    </ul>
+                  </div>
+                  <!--.social.social_light
+                  ul.social__list
+                      li.social__item
+                          a(href='#').social__link
+                              +icon('vk','social__icon')
+                      li.social__item
+                          a(href='#').social__link
+                              +icon('github','social__icon')
+                      li.social__item
+                          a(href='#').social__link
+                              +icon('in','social__icon')
+                  -->
+                </div>
+              </div>
+              <div class="panel__actions">
+                <ul class="panel__actions-list">
+                  <li class="panel__actions-item"><a href="#" class="panel__actions-link">Мои работы</a></li>
+                  <li class="panel__actions-item"><a href="#" class="panel__actions-link">Обо мне</a></li>
+                  <li class="panel__actions-item"><a href="#" class="panel__actions-link">Блог</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="welcome__back">
+            <form action="" method="post" name="authorization" class="authorization">
+              <div class="panel panel_theme_transparent">
+                <div class="panel__content">
+                  <div class="panel__title">
+                    <div class="base-title">
+                      <div class="base-title__text">Авторизуйтесь</div>
+                    </div>
+                  </div>
+                  <div class="input-addon">
+                    <div class="input-addon__item">
+                      <svg class="icon svg-login-dims input-addon__icon">
+                        <use xlink:href="./assets/img/icons/sprite.svg#login"></use>
+                      </svg>
+                    </div>
+                    <input type="text" name="login" placeholder="Логин" required class="base-inp input-addon__field">
+                  </div>
+                  <div class="input-addon">
+                    <div class="input-addon__item">
+                      <svg class="icon svg-password-dims input-addon__icon">
+                        <use xlink:href="./assets/img/icons/sprite.svg#password"></use>
+                      </svg>
+                    </div>
+                    <input type="password" name="password" placeholder="Пароль" required class="base-inp input-addon__field">
+                  </div>
+                  <div class="authorization__captcha">
+                    <label class="switch">
+                      <input type="checkbox" name="captcha" value="yes" class="switch__inp"><span class="switch__el switch__el_checkbox"></span><span class="switch__text">Я человек</span>
+                    </label>
+                  </div>
+                  <div class="authorization__extra-captcha">
+                    <div class="authorization__extra-captcha-title">Вы точно не робот?</div>
+                    <div class="switches">
+                      <label class="switch">
+                        <input type="radio" name="extra_captcha" value="yes" class="switch__inp"><span class="switch__el switch__el_radio"></span><span class="switch__text">Да</span>
+                      </label>
+                      <label class="switch">
+                        <input type="radio" name="extra_captcha" value="no" class="switch__inp"><span class="switch__el switch__el_radio"></span><span class="switch__text">Не уверен</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel__actions">
+                  <ul class="panel__actions-list">
+                    <li class="panel__actions-item"><a href="#" id="on_main" class="panel__actions-link">На главную</a></li>
+                    <li class="panel__actions-item">
+                      <button type="submit" class="panel__actions-link">Войти</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <div class="copy welcome-copy">© Ольга Петренко | создано с любовью в LoftSchool | 2016</div>
+    </div>
+  </body>
+  <script src="./assets/js/foundation.js" defer></script>
+  <script src="./assets/js/app.js" defer></script>
+</html>

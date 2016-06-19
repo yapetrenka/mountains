@@ -1,0 +1,70 @@
+include ../common/_mixin
+doctype html
+html
+    include ../common/_head
+    body
+        <!--[if lt IE 7]>
+        <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
+        <![endif]-->
+        .main-container
+            main.main
+                .design-elements
+                    .design-elements__row
+                        .design-elements__item
+                            .base-title.base-title_l
+                                .base-title__text Заголовки
+                            .base-title.base-title_l.base-title_light
+                                .base-title__text Большой<br> светлый
+                            .base-title
+                                .base-title__text Заголовок<br> маленький
+                            .base-title.base-title_light
+                                .base-title__text И светлый
+                        .design-elements__item
+                            .base-title
+                                .base-title__text Элементы<br> форм
+                            input(type='text',name='name',placeholder='Имя',required).base-inp
+                            input(type='email',name='email',placeholder='Email',required).base-inp
+                            input(type='text',name='login',placeholder='Логин',required).base-inp
+                            input(type='password',name='password',placeholder='Пароль',required).base-inp
+                            textarea(name='message',placeholder='Ваше сообщение',required).base-textarea
+                            .switches
+                                label.switch
+                                    input(type='radio',name='radio',value='1',checked).switch__inp
+                                    span.switch__el.switch__el_radio
+                                    span.switch__text radio 1
+                                label.switch
+                                    input(type='radio',name='radio',value='2').switch__inp
+                                    span.switch__el.switch__el_radio
+                                    span.switch__text radio 2
+                                label.switch
+                                    input(type='checkbox',name='checkbox',value='1').switch__inp
+                                    span.switch__el.switch__el_checkbox
+                                    span.switch__text checkbox
+                    .design-elements__row
+                        .design-elements__item
+                            .base-title
+                                .base-title__text Кнопки
+                            button.btn.btn_primary Кнопка
+                            button.btn.btn_light Кнопка
+                        .design-elements__item
+                            .base-title
+                                .base-title__text Иконки
+                            +icon('vk')
+                            +icon('github')
+                            +icon('in')
+                    .design-elements__row
+                        .design-elements__item
+                            .base-title
+                                .base-title__text Контент
+                            .content
+                                ul
+                                    - for (var i=0; i<=2; i++) {
+                                    li= 'Item ' + [i]
+                                    - }
+                                ol
+                                    - for (var i=0; i<=2; i++) {
+                                    li= 'Item ' + [i]
+                                    - }
+
+
+    include ../common/_foot

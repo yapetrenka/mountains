@@ -1,0 +1,89 @@
+.welcome-page {
+  background: url("../img/skin/mountains.jpg") no-repeat 50% 0;
+  background-size: cover;
+  padding: $gutter;
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.welcome {
+  &-social {
+    margin-top: 35px;
+    text-align: center;
+  }
+  &__front,
+  &__back {
+    float: left;
+    position: relative;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: all .4s ease-in-out;
+  }
+  &__front {
+    transform: rotateX(0) rotateY(0);
+    z-index: 2;
+    .flip & {
+      transform: rotateY(179deg);
+    }
+  }
+  &__back {
+    margin-left: -380px;
+    transform: rotateY(-179deg);
+    z-index: 1;
+    .flip & {
+      transform: rotateX(0) rotateY(0);
+      z-index: 3;
+    }
+  }
+}
+
+.person {
+  text-align: center;
+  &__ava {
+    border-radius: 50%;
+    height: 140px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    width: 140px;
+  }
+  &__name {
+    font-size: 28px;
+    font-weight: 500;
+  }
+  &__content {
+
+  }
+}
+
+.authorization {
+  text-align: center;
+  &__captcha {
+    margin-bottom: $gutter;
+  }
+  &__extra-captcha {
+    &-title {
+      font-weight: bold;
+      margin-bottom: $gutter/2;
+    }
+  }
+}
+
+.auth-top {
+  text-align: right;
+  &__btn {
+    width: 180px;
+    &_hidden {
+      visibility: hidden;
+    }
+  }
+}
+
+.welcome-copy {
+  color: $light-color;
+  font-weight: 300;
+  margin: $gutter 0;
+  text-align: center;
+}
