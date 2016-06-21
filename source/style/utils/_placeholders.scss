@@ -42,21 +42,6 @@
   }
 }
 
-%base-title-s {
-  font-family: $font-family-heading;
-  font-size: 35px;
-  line-height: 1.2;
-  margin-bottom: 30px;
-}
-
-%base-title-l {
-  color: $dark-color;
-  font-family: $font-family-heading;
-  font-size: $font-size-xl;
-  line-height: 1;
-  margin-bottom: 60px;
-}
-
 %clearfix {
   &:before,
   &:after {
@@ -64,4 +49,17 @@
     content: '';
     display: table;
   }
+}
+
+%centered-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%centered-self {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

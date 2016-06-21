@@ -1,0 +1,29 @@
+header.header.header_blog
+    .header__wrap
+        .header__top
+            .social.social_light
+                ul.social__list
+                    each href, name in social
+                        li.social__item
+                            a(href="#{href}").social__link
+                                +icon(name,'social__icon')
+            a(href="#").fullscreen-menu-btn#menu_btn
+                span.fullscreen-menu-btn__icon
+            nav.fullscreen-menu#menu
+                ul.fullscreen-menu__list
+                    each href, title in pages
+                        li.fullscreen-menu__item
+                            a(href="#{href}").fullscreen-menu__link= title
+        .header__info
+            .header__info-wrap
+                .person
+                    .person__ava
+                        img(src='./assets/img/content/ava.jpg').person__img
+                .base-title.base-title_l.base-title_light.base-title_blog
+                    +icon('blog_header','base-title__bg-text')
+                    h1.base-title__text Блог
+                .header__sub-title Статьи, которые я написала
+    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 100 100', preserveaspectratio='none').header__triangle.header__triangle_left
+        polygon(points='0,0  0,100  100,100')
+    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 100 100', preserveaspectratio='none').header__triangle.header__triangle_right
+        polygon(points='100,0  100,100 0,100')

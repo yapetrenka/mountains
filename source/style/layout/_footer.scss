@@ -1,0 +1,38 @@
+.footer {
+  background-color: rgba($dark-color, .85);
+  color: rgba($light-color, .5);
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+  &__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    padding: 0 $gutter*1.5;
+    &_top {
+      border-bottom: 1px solid rgba($light-color, .1);
+    }
+    &_bottom {
+      font-weight: 300;
+    }
+  }
+  &-menu {
+    &__item {
+      display: inline-block;
+      margin-right: $gutter*2;
+    }
+    &__link {
+      color: $light-color;
+    }
+  }
+  &__about {
+    max-width: 520px;
+  }
+  &__social {
+    .icon {
+      height: 36px;
+      width: 36px;
+    }
+  }
+}

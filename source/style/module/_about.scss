@@ -1,0 +1,25 @@
+.about {
+  display: flex;
+  &__col {
+    &_right {
+      max-width: 830px;
+    }
+  }
+  &__left {
+    background-color: $bg-color-2;
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    padding: 0 $gutter*2 $gutter*2;
+  }
+  &__desc {
+    margin-left: $gutter*3;
+    max-width: 440px;
+    width: (440/830)*100%;
+  }
+  &__right {
+    background-color: $bg-color-3;
+    flex: 1;
+    padding: 0 $gutter*2 $gutter*2;
+  }
+}

@@ -1,13 +1,30 @@
 .panel {
   border-radius: $border-radius-base;
+  margin: 0 auto;
   overflow: hidden;
+  position: relative;
   width: 380px;
+  &__blur {
+    filter: blur(5px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
   &__content {
     @extend %clearfix;
     padding: $gutter*2 $gutter;
+    position: relative;
     .panel_theme_transparent & {
       background-color: rgba($light-color, .85);
     }
+    .panel_theme_blur & {
+      background-color: rgba($light-color, .15);
+    }
+  }
+  &__fields {
+    margin-bottom: -$gutter;
   }
   &__actions {
     &-list {

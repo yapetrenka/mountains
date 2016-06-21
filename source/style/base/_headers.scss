@@ -1,8 +1,15 @@
 .base-title {
-  @extend %base-title-s;
+  font-family: $font-family-heading;
+  margin: 30px 0;
+  position: relative;
   text-align: center;
   &_l {
-    @extend %base-title-l;
+    color: $dark-color;
+    margin: 60px 0;
+    .base-title__text {
+      font-size: $font-size-xl;
+      line-height: 1;
+    }
   }
   &_light {
     color: $light-color;
@@ -12,10 +19,35 @@
         background-color: rgba($light-color, .2);
       }
     }
+    .base-title__bg-text {
+      fill: $light-color;
+    }
+  }
+  &_blog {
+    .base-title__bg-text {
+      top: 85%;
+    }
+  }
+  &__bg-text {
+    fill: $bg-text-color;
+    opacity: .07;
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+  }
+  &_bg-s {
+    .base-title__bg-text {
+      height: 120px;
+    }
   }
   &__text {
+    font-size: 35px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 0;
     display: inline-block;
-    padding: 0 50px;
+    padding: 0 45px;
     position: relative;
     vertical-align: top;
     &:before,
@@ -28,10 +60,10 @@
       width: 22px;
     }
     &:before {
-      left: 7px;
+      left: 5px;
     }
     &:after {
-      right: 7px;
+      right: 5px;
     }
   }
 }

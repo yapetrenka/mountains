@@ -1,0 +1,91 @@
+- var pageClass = "about-page"
+extends ../main
+block title
+    | Обо мне
+block content
+    section.about
+        .about__left
+            .about__title
+                .base-title.base-title_l.base-title_bg-s
+                    +icon('about_header','base-title__bg-text')
+                    h1.base-title__text Обо мне
+            .about__desc
+                .about__desc-img
+                    img(src='./assets/img/content/my_photo.jpg')
+                .base-title
+                    .base-title__text Кто я
+                .about__desc-content.content
+                    p.
+                        Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                    p.
+                        Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+        .about__right
+            .about__col.about__col_right
+                .base-title
+                    .base-title__text Чем я могу быть<br> вам полезен
+                .content
+                    p.
+                        Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
+                .skills
+                    each object, name in skills
+                        .skills__item
+                            .skills__title= name
+                            .skills__list
+                                each name, val in skills
+                                    .skills__list-item
+                                        .skill
+                                            svg.skill__circle
+                                                circle(transform="rotate(-90)",r="50",cx="-60",cy="60").skill__circle-item.skill__circle-item_bg
+                                                // first date = percent * 314/100
+                                                -var percent = 90
+                                                -var level = percent*314/100
+                                                circle(transform="rotate(-90)",r="50",cx="-60",cy="60",style="stroke-dasharray: "+ level +"px 314px;").skill__circle-item.skill__circle-item_level
+                                            .skill__title= val
+                                //.skills__list-item
+                                    .skill
+                                        svg.skill__circle
+                                            circle(transform="rotate(-90)",r="50",cx="-60",cy="60").skill__circle-item.skill__circle-item_bg
+                                            // first date = precent * 314/100
+                                            circle(transform="rotate(-90)",r="50",cx="-60",cy="60",style="stroke-dasharray: 250px 314px;").skill__circle-item.skill__circle-item_level
+                                        .skill__title
+                                            |JavaScript
+                                            |& jQuery
+                    //.skills__item
+                        .skills__title Backend
+                        .skills__list
+                            .skills__list-item
+                                .skill
+                                    svg.skill__circle
+                                        circle(transform="rotate(-90)",r="50",cx="-60",cy="60").skill__circle-item.skill__circle-item_bg
+                                        // first date = precent * 314/100
+                                        circle(transform="rotate(-90)",r="50",cx="-60",cy="60",style="stroke-dasharray: 250px 314px;").skill__circle-item.skill__circle-item_level
+                                    .skill__title HTML 5
+                            .skills__list-item
+                                .skill
+                                    svg.skill__circle
+                                        circle(transform="rotate(-90)",r="50",cx="-60",cy="60").skill__circle-item.skill__circle-item_bg
+                                        // first date = precent * 314/100
+                                        circle(transform="rotate(-90)",r="50",cx="-60",cy="60",style="stroke-dasharray: 250px 314px;").skill__circle-item.skill__circle-item_level
+                                    .skill__title HTML 5
+    section.contacts
+        .contacts__map#contacts_map
+        .contacts__info
+            .base-title
+                .base-title__text Контакты
+            ul.contacts__list
+                li.contacts__item
+                    .contacts__item-icon
+                        +icon('skype','skype_icon')
+                    .contacts__item-text yapetrenka
+                li.contacts__item
+                    .contacts__item-icon
+                        +icon('envelope','mail_icon')
+                    .contacts__item-text yapetrenka@yandex.ru
+                li.contacts__item
+                    .contacts__item-icon
+                        +icon('phone','phone_icon')
+                    .contacts__item-text +7 (925) 882 20 24
+                li.contacts__item
+                    .contacts__item-icon
+                        +icon('map_marker','map_marker_icon')
+                    .contacts__item-text г. Москва, Денежный пер., д. 4

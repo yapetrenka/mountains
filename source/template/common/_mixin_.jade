@@ -1,0 +1,19 @@
+mixin navigation (className, items, activeItem)
+    nav(class="#{className}")
+        ul(class="#{className}__list")
+            each nav, ndx in items
+                li(class="#{className}__item" + ( (ndx == activeItem) ? ' #{className}__item_active' : '' ))
+                    a(href="#" class="#{className}__link")= nav
+//+navigation('nav', ['Главная', 'Новости', "О компании", "Сравнение", 'Корзина'], 3)
+mixin icon(name,mod)
+    - mod = mod || ''
+    svg(class="icon svg-" + name + '-dims ' + mod)
+        use(xlink:href="./assets/img/icons/sprite.svg#" + name)
+//mixin social (className, items)
+    .social(class="#{className}")
+        ul.social__list
+            each href, name in items
+                li.social__item
+                    a(href="{href}").social__link 111
+                        //+icon(name,'social__icon')
+//+social('social_primary', social)

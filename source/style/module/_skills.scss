@@ -1,0 +1,44 @@
+.skills {
+  &__item {
+
+  }
+  &__title {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: $gutter;
+  }
+  &__list {
+    font-size: 0;
+    margin-left: -($gutter*2);
+    &-item {
+      display: inline-block;
+      margin: 0 0 $gutter*2 $gutter*2;
+      vertical-align: top;
+    }
+  }
+}
+.skill {
+  position: relative;
+  &__circle {
+    height: 120px;
+    width: 120px;
+    &-item {
+      fill: transparent;
+      stroke: $bg-color-4;
+      stroke: {
+        dasharray: 314px 314px;
+        width: $gutter;
+      }
+      &_level {
+        stroke: $primary-color;
+      }
+    }
+  }
+  &__title {
+    color: $primary-color;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+    @extend %centered-self;
+  }
+}

@@ -1,0 +1,42 @@
+.reviews {
+  font-size: 0;
+  margin: 0 auto 50px;
+  text-align: center;
+  position: relative;
+  &-section {
+    background: url("../img/skin/mountains_water.jpg") no-repeat 50% 0;
+    @extend %clearfix;
+    .panel__blur {
+      background: url("../img/skin/mountains_water.jpg") no-repeat 50% -537px;
+    }
+  }
+  &__item {
+    font-size: $font-size-base;
+    display: inline-block;
+    margin: 0 $gutter/2 $gutter;
+    padding-top: 60px;
+    position: relative;
+    text-align: left;
+    width: 380px;
+  }
+  &__text {
+    margin-bottom: $gutter;
+  }
+  &__person {
+    align-items: center;
+    display: flex;
+    &-ava {
+      border-radius: 50%;
+      height: 78px;
+      margin-right: $gutter;
+      overflow: hidden;
+      width: 78px;
+    }
+    &-info {
+      color: $primary-color-dark;
+    }
+    &-name {
+      font-weight: bold;
+    }
+  }
+}

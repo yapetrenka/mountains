@@ -40,24 +40,6 @@
   }
 }
 
-.person {
-  text-align: center;
-  &__ava {
-    border-radius: 50%;
-    height: 140px;
-    margin: 0 auto 15px;
-    overflow: hidden;
-    width: 140px;
-  }
-  &__name {
-    font-size: 28px;
-    font-weight: 500;
-  }
-  &__content {
-
-  }
-}
-
 .authorization {
   text-align: center;
   &__captcha {

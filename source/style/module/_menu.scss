@@ -1,0 +1,125 @@
+.fullscreen-menu {
+  display: none;
+  background-color: rgba($primary-color, .85);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  @extend %centered-content;
+  &.active {
+    display: flex;
+  }
+  &__list {
+
+  }
+  &__item {
+    color: $light-color;
+    font-family: $font-family-heading;
+    font-size: 63px;
+    margin: 60px 0;
+    text-align: center;
+  }
+  &__link {
+    color: $light-color;
+    display: inline-block;
+    padding: 0 45px;
+    position: relative;
+    &:before,
+    &:after {
+      background-color: rgba($light-color, .5);
+      content: '';
+      height: 5px;
+      opacity: 0;
+      position: absolute;
+      top: .5em;
+      width: 22px;
+    }
+    &:before {
+      left: 5px;
+    }
+    &:after {
+      right: 5px;
+    }
+    &:hover {
+      &:before,
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  &-btn {
+    display: block;
+    height: 35px;
+    position: relative;
+    width: 40px;
+    z-index: 10;
+    &__icon {
+      background: $light-color;
+      border-radius: 2px;
+      height: 5px;
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 100%;
+      transition: background 0 .3s;
+      &:before,
+      &:after {
+        background-color: $light-color;
+        border-radius: 2px;
+        content: '';
+        height: 5px;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        transition-duration: .3s, .3s;
+        //transition-delay: .3s, 0;
+      }
+      &:before {
+        top: -15px;
+        transition-property: top, transform;
+      }
+      &:after {
+        bottom: -15px;
+        transition-property: bottom, transform;
+      }
+      &.active {
+        background: none;
+        &:before {
+          top: 0;
+          transform: rotate(45deg);
+          transition-delay: 0,.3s;
+        }
+        &:after {
+          bottom: 0;
+          transform: rotate(-45deg);
+          transition-delay: 0,.3s;
+        }
+      }
+    }
+    &.open {
+      &:before,
+      &:after {
+        background-color: $light-color;
+        border-radius: 2px;
+        content: '';
+        margin-left: -2px;
+        position: absolute;
+        top: 14%;
+        bottom: 14%;
+        left: 50%;
+        width: 5px;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+    &__icon {
+      fill: $light-color;
+    }
+  }
+}
