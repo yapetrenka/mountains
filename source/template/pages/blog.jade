@@ -4,11 +4,13 @@ block title
 block content
     section.blog-section
         .blog-section__left
-            ul.blog-nav
-                - for (var i=1; i<=4; i++) {
-                li.blog-nav__item
-                    a(href="#",class="blog-nav__link" + ( (i == 1) ? ' blog-nav__link_active' : '' ))= 'Приёмы в вёрстке, без которых не обходится ни один сайт ' + [i]
-                - }
+            .blog-nav
+                a(href="#").blog-nav__tggl#blog_nav_tggl
+                ul.blog-nav__list
+                    - for (var i=1; i<=4; i++) {
+                    li.blog-nav__item
+                        a(href="#",class="blog-nav__link" + ( (i == 1) ? ' blog-nav__link_active' : '' ))= 'Приёмы в вёрстке, без которых не обходится сайт ' + [i]
+                    - }
         .blog-section__right
             .blog
                 ul.blog__list

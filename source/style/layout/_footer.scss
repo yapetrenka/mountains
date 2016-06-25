@@ -4,12 +4,24 @@
   display: flex;
   flex-direction: column;
   height: 140px;
+  @include tablets {
+    display: block;
+    height: auto;
+  }
+  @include phones {
+    font-size: 13px;
+  }
   &__section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex: 1;
     padding: 0 $gutter*1.5;
+    @include tablets {
+      display: block;
+      padding: $gutter;
+      text-align: center;
+    }
     &_top {
       border-bottom: 1px solid rgba($light-color, .1);
     }
@@ -18,21 +30,43 @@
     }
   }
   &-menu {
+    @include tablets {
+      margin-bottom: 15px;
+    }
     &__item {
       display: inline-block;
       margin-right: $gutter*2;
+      @include tablets {
+        margin-right: $gutter;
+      }
+      @include phones {
+        margin-right: 5px;
+      }
     }
     &__link {
       color: $light-color;
     }
   }
   &__about {
+    margin-right: $gutter;
     max-width: 520px;
+    @include tablets {
+      max-width: 100%;
+      margin: 0 0 $gutter/2 0;
+    }
   }
   &__social {
     .icon {
       height: 36px;
       width: 36px;
+    }
+  }
+}
+
+.copy {
+  &__person {
+    &:after {
+      content: ' |';
     }
   }
 }

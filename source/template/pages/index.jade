@@ -8,7 +8,7 @@ block content
         main.main
             .welcome
                 .welcome__front
-                    .panel.panel_theme_transparent
+                    .panel.panel_theme_light
                         .panel__content
                             .person
                                 .person__ava
@@ -33,7 +33,7 @@ block content
 
                 .welcome__back
                     form(action='',method='post',name='authorization').authorization
-                        .panel.panel_theme_transparent
+                        .panel.panel_theme_light
                             .panel__content
                                 .panel__title
                                     .base-title
@@ -69,6 +69,8 @@ block content
                                         a(href='#').panel__actions-link#on_main На главную
                                     li.panel__actions-item
                                         button(type='submit').panel__actions-link Войти
-        .copy.welcome-copy
-            | © Ольга Петренко | создано с любовью в LoftSchool | 2016
+        .welcome-copy
+            .copy
+                span.copy__person © Ольга Петренко
+                |  создано с любовью в LoftSchool | 2016
 include ../common/_foot

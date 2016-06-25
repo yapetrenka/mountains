@@ -1,7 +1,10 @@
-html, body{
+html {
   color: $text-color;
   font-size: $font-size-base;
   font-family: $font-family-base;
+  @include phones {
+    font-size: 14px;
+  }
 }
 
 *, *:before, *:after {
@@ -66,6 +69,9 @@ h6, .h6 {
 }
 */
 .content {
+  @include tablets {
+    font-size: 14px;
+  }
   p, ul, ol, table {
     margin-bottom: .8em;
   }

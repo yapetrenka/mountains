@@ -6,33 +6,46 @@
     font-size: 28px;
     font-weight: 500;
     margin-bottom: $gutter;
+    @include tablets {
+      font-size: 21px;
+    }
   }
   &__list {
     font-size: 0;
-    margin-left: -($gutter*2);
+    margin-left: -($gutter*1.5);
     &-item {
       display: inline-block;
-      margin: 0 0 $gutter*2 $gutter*2;
+      margin: 0 0 $gutter*1.5 $gutter*1.5;
       vertical-align: top;
     }
   }
+  @include laptop {
+    text-align: center;
+  }
 }
 .skill {
+  height: 140px;
+  padding: $gutter/2;
   position: relative;
+  width: 140px;
   &__circle {
-    height: 120px;
-    width: 120px;
+    height: 100%;
+    width: 100%;
     &-item {
       fill: transparent;
       stroke: $bg-color-4;
-      stroke: {
-        dasharray: 314px 314px;
-        width: $gutter;
-      }
+      stroke-width: $gutter;
+      //stroke-dasharray: 314px 314px;
       &_level {
         stroke: $primary-color;
       }
+      @include desktop {
+        stroke-width: 16px;
+      }
     }
+  }
+  svg.skill__circle {
+    overflow: visible;
   }
   &__title {
     color: $primary-color;
@@ -40,5 +53,10 @@
     line-height: 1.2;
     text-align: center;
     @extend %centered-self;
+  }
+  @include desktop {
+    height: 110px;
+    padding: 8px;
+    width: 110px;
   }
 }

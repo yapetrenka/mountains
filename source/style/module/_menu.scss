@@ -12,14 +12,22 @@
     display: flex;
   }
   &__list {
-
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
   }
   &__item {
     color: $light-color;
     font-family: $font-family-heading;
     font-size: 63px;
-    margin: 60px 0;
+    height: 2em;
     text-align: center;
+    @include tablets {
+      font-size: 49px;
+    }
+    @include phones {
+      font-size: 35px;
+    }
   }
   &__link {
     color: $light-color;

@@ -19,6 +19,9 @@
   &__name {
     font-size: 28px;
     font-weight: 500;
+    @include phones {
+      font-size: 21px;
+    }
   }
   &__content {
 

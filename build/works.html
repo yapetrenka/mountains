@@ -16,7 +16,7 @@
     <!--[if lt IE 7]>
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
     <![endif]-->
-    <div class="main-container inner-page">
+    <div class="main-container inner-page works-page">
       <header class="header">
         <div class="header__wrap">
           <div class="header__top">
@@ -115,8 +115,11 @@
           <div class="reviews">
             <ul class="reviews__list">
               <li class="reviews__item">
-                <!--.reviews__quote+icon('quote','quote__icon')
-                -->
+                <div class="reviews__quote">
+                  <svg class="icon svg-quote-dims quote__icon">
+                    <use xlink:href="./assets/img/icons/sprite.svg#quote"></use>
+                  </svg>
+                </div>
                 <div class="reviews__text">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
                 <div class="reviews__person">
                   <div class="reviews__person-ava"><img src="./assets/img/content/photo_dima.jpg" class="reviews__img"></div>
@@ -127,8 +130,11 @@
                 </div>
               </li>
               <li class="reviews__item">
-                <!--.reviews__quote+icon('quote','quote__icon')
-                -->
+                <div class="reviews__quote">
+                  <svg class="icon svg-quote-dims quote__icon">
+                    <use xlink:href="./assets/img/icons/sprite.svg#quote"></use>
+                  </svg>
+                </div>
                 <div class="reviews__text">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
                 <div class="reviews__person">
                   <div class="reviews__person-ava"><img src="./assets/img/content/photo_zar.jpg" class="reviews__img"></div>
@@ -205,8 +211,10 @@
           </div>
         </div>
         <div class="footer__section footer__section_bottom">
-          <div class="footer__about">Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</div>
-          <div class="footer__copy">© Ольга Петренко | создано с любовью в LoftSchool | 2016</div>
+          <div class="footer__about">Я веб-разработчик из Москвы, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</div>
+          <div class="footer__copy">
+            <div class="copy"><span class="copy__person">© Ольга Петренко</span> создано с любовью в LoftSchool | 2016</div>
+          </div>
         </div>
       </footer>
     </div>

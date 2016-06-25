@@ -1,4 +1,5 @@
-extends ../main
+//-var pageClass = "works-page"
+extends ../works
 block title
     | Мои работы
 block content
@@ -34,7 +35,7 @@ block content
             ul.reviews__list
                 each object, name in reviews
                     li.reviews__item
-                        //.reviews__quote
+                        .reviews__quote
                             +icon('quote','quote__icon')
                         .reviews__text
                             |Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!

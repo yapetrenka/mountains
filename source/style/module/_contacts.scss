@@ -7,15 +7,24 @@
     height: 100%;
   }
   &__info {
-    background-color: rgba($light-color, .85);
-    border-radius: $border-radius-base;
-    padding: 0 $gutter*2 $gutter;
-    width: 380px;
     @extend %centered-self;
+    @include phones {
+      top: 0;
+      left: 0;
+      right: 0;
+      transform: none;
+      .panel {
+        border-radius: 0;
+        width: 100%;
+      }
+    }
   }
   &__item {
     display: flex;
     margin-bottom: $gutter;
+    &:last-child {
+      margin-bottom: 0;
+    }
     &-icon {
       text-align: center;
       width: $gutter*2;

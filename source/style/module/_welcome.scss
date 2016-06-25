@@ -7,9 +7,13 @@
     align-items: center;
     justify-content: center;
   }
+  @include phones {
+    padding: $gutter/2;
+  }
 }
 
 .welcome {
+  margin: $gutter 0;
   &-social {
     margin-top: 35px;
     text-align: center;
@@ -26,16 +30,22 @@
     transform: rotateX(0) rotateY(0);
     z-index: 2;
     .flip & {
-      transform: rotateY(179deg);
+      transform: rotateY(180deg);
     }
   }
   &__back {
     margin-left: -380px;
-    transform: rotateY(-179deg);
+    transform: rotateY(-180deg);
     z-index: 1;
     .flip & {
       transform: rotateX(0) rotateY(0);
       z-index: 3;
+    }
+    @include tablets {
+      margin-left: -350px;
+    }
+    @include phones {
+      margin-left: -300px;
     }
   }
 }
@@ -61,6 +71,12 @@
       visibility: hidden;
     }
   }
+  @include phones {
+    text-align: center;
+    &__btn {
+      width: auto;
+    }
+  }
 }
 
 .welcome-copy {
@@ -68,4 +84,15 @@
   font-weight: 300;
   margin: $gutter 0;
   text-align: center;
+  @include tablets {
+    font-size: 14px;
+  }
+  @include tablets {
+    .copy__person {
+      display: block;
+      &:after {
+        content: '';
+      }
+    }
+  }
 }

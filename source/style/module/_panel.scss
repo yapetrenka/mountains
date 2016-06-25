@@ -12,11 +12,16 @@
     right: 0;
     bottom: 0;
   }
+  &__title {
+    .base-title {
+      margin-top: 0;
+    }
+  }
   &__content {
     @extend %clearfix;
-    padding: $gutter*2 $gutter;
+    padding: $gutter*1.5 $gutter;
     position: relative;
-    .panel_theme_transparent & {
+    .panel_theme_light & {
       background-color: rgba($light-color, .85);
     }
     .panel_theme_blur & {
@@ -55,5 +60,11 @@
         background-color: rgba($primary-color-dark, .85);
       }
     }
+  }
+  @include tablets {
+    width: 350px;
+  }
+  @include phones {
+    width: 300px;
   }
 }

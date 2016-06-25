@@ -1,8 +1,8 @@
 .reviews {
-  font-size: 0;
-  margin: 0 auto 50px;
+  margin-bottom: $gutter*2;
   text-align: center;
   position: relative;
+  padding: 0 $gutter;
   &-section {
     background: url("../img/skin/mountains_water.jpg") no-repeat 50% 0;
     @extend %clearfix;
@@ -10,16 +10,43 @@
       background: url("../img/skin/mountains_water.jpg") no-repeat 50% -537px;
     }
   }
+  &__list {
+    font-size: 0;
+    margin: 0 auto;
+    max-width: 780px;
+  }
   &__item {
     font-size: $font-size-base;
     display: inline-block;
-    margin: 0 $gutter/2 $gutter;
-    padding-top: 60px;
+    margin: 0 3% $gutter*1.5 0;
+    padding-top: $gutter*2.5;
     position: relative;
     text-align: left;
-    width: 380px;
+    width: 48.5%;
+    &:nth-child(2n-1) {
+      margin-right: 0;
+    }
+    @include tablets {
+      font-size: 14px;
+    }
+    @include phones {
+      margin-right: 0;
+      padding-top: $gutter*2;
+      width: 100%;
+    }
+  }
+  &__quote {
+    opacity: .2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include phones {
+      text-align: center;
+      width: 100%;
+    }
   }
   &__text {
+    line-height: 1.625;
     margin-bottom: $gutter;
   }
   &__person {
@@ -27,16 +54,22 @@
     display: flex;
     &-ava {
       border-radius: 50%;
+      flex: none;
       height: 78px;
       margin-right: $gutter;
       overflow: hidden;
       width: 78px;
+      @include phones {
+        height: 50px;
+        width: 50px;
+      }
     }
     &-info {
       color: $primary-color-dark;
     }
     &-name {
       font-weight: bold;
+      margin-bottom: 5px;
     }
   }
 }

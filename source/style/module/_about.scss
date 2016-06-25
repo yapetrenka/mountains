@@ -1,25 +1,58 @@
 .about {
   display: flex;
-  &__col {
-    &_right {
-      max-width: 830px;
+  &__skills {
+    max-width: 830px;
+    &-content {
+      margin: 0 auto $gutter*2;
+      @include laptop {
+        max-width: 470px;
+      }
     }
   }
-  &__left {
-    background-color: $bg-color-2;
-    display: flex;
-    justify-content: flex-end;
+  &__col {
     flex: 1;
     padding: 0 $gutter*2 $gutter*2;
+    @include tablets {
+      padding: 0 $gutter/2 $gutter;
+    }
+    &_left {
+      background-color: $bg-color-2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include widescreen {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-end;
+      }
+    }
+    &_right {
+      background-color: $bg-color-3;
+    }
+  }
+  &__title {
+    .base-title {
+      margin-top: $gutter*1.5;
+      @include laptop {
+        margin-top: $gutter*2;
+      }
+    }
+    @include widescreen {
+      width: auto;
+    }
   }
   &__desc {
-    margin-left: $gutter*3;
-    max-width: 440px;
-    width: (440/830)*100%;
+    max-width: 470px;
+    @include widescreen {
+      margin: $gutter 0 0 $gutter*3;
+    }
+    &-img {
+      @include tablets {
+        margin: 0 (-$gutter/2);
+      }
+    }
   }
-  &__right {
-    background-color: $bg-color-3;
-    flex: 1;
-    padding: 0 $gutter*2 $gutter*2;
+  @include laptop {
+    flex-direction: column;
   }
 }

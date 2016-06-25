@@ -4,16 +4,57 @@ $blog-width: 1560;
   margin: $gutter*3 auto;
   max-width: $blog-width+px;
   &__left {
-    width: (280/$blog-width)*100%;
+    flex: none;
+    max-width: 28%;
+    width: 280px;
+    @include tablets {
+      margin: 0;
+      width: 0;
+    }
   }
   &__right {
-    margin-left: $gutter*6;
-    width: (980/$blog-width)*100%;
+    margin: 0 (120/$blog-width)*100%;
+    max-width: 980px;
   }
 }
 
 .blog-nav {
   text-align: right;
+  transition: (all .2s ease);
+  @include tablets {
+    background-color: $primary-color;
+    box-shadow: 3px 0 3px rgba(#000, .2);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: -280px;
+    top: 0;
+    bottom: 0;
+    width: 280px;
+    &.open {
+      left: 0;
+    }
+    &__tggl {
+      height: 48px;
+      margin-top: -24px;
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      right: -18px;
+      width: 18px;
+      &:before {
+        background-color: $primary-color;
+        border-radius: 50%;
+        content: '';
+        margin-top: -30px;
+        position: absolute;
+        top: 50%;
+        right: 6px;
+        height: 60px;
+        width: 60px;
+      }
+    }
+  }
   &__item {
     margin-bottom: $gutter/2;
   }
@@ -22,12 +63,19 @@ $blog-width: 1560;
     display: block;
     color: $text-color;
     line-height: 26px;
-    padding: 8px $gutter 8px 0;
+    padding: 8px $gutter;
     &_active,
     &:hover {
       border-color: $primary-color;
       color: $primary-color;
       font-weight: 500;
+    }
+    @include tablets {
+      color: rgba($light-color, .7);
+      &_active,
+      &:hover {
+        color: $light-color;
+      }
     }
   }
 }
@@ -40,14 +88,28 @@ $blog-width: 1560;
     &:last-child {
       border-bottom: 0;
     }
+    @include tablets {
+      margin-bottom: $gutter*2;
+      padding-bottom: $gutter*2;
+    }
+    @include phones {
+      margin-bottom: $gutter*1.5;
+      padding-bottom: $gutter*1.5;
+    }
   }
   &__title {
     font-family: $font-family-heading;
     font-size: 35px;
-    margin-bottom: $gutter;
+    margin-bottom: .5em;
+    @include tablets {
+      font-size: 30px;
+    }
+    @include phones {
+      font-size: 21px;
+    }
   }
   &__date {
     color: $primary-color;
-    margin-bottom: $gutter;
+    margin-bottom: 1em;
   }
 }

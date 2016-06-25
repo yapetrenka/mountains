@@ -17,5 +17,8 @@
       background-color: $light-color;
       color: $primary-color;
     }
+    @include phones {
+      line-height: 38px;
+    }
   }
 }

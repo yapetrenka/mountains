@@ -1,10 +1,6 @@
 %btn {
   border: none;
   cursor: pointer;
-  font: {
-    family: $font-family-base;
-    size: $btn-font-size;
-  };
   height: $btn-height;
   line-height: $btn-height;
   outline: none;
@@ -12,6 +8,10 @@
   text-align: center;
   text-decoration: none;
   transition: (all .2s ease);
+  @include phones {
+    height: 40px;
+    line-height: 40px;
+  }
 }
 
 %btn-ext {
@@ -26,10 +26,6 @@
   border-radius: $border-radius-base;
   color: $text-color;
   display: inline-block;
-  font: {
-    family: $font-family-base;
-    size: $font-size-base;
-  };
   height: $input-height;
   margin-bottom: $gutter;
   outline: none;
@@ -39,6 +35,9 @@
   width: 100%;
   &:focus {
     box-shadow: 0 0 3px 1px rgba($primary-color, .6);
+  }
+  @include phones {
+    height: 40px;
   }
 }
 
