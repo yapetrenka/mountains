@@ -10,7 +10,7 @@ block content
         section.slider
             .slider__left
                 .slider__display
-                    img(src='./assets/img/content/works/source/work_img_1.png',alt='').slider__display-img
+                    img(src='./assets/img/content/works/source/work_img_1.png',alt='work').slider__display-img
                 .slider__info
                     - for (var i=1; i<=4; i++) {
                     .slider__info-item(class=((i == 1) ? 'active' : ''), data-project='project_'+i, data-img='./assets/img/content/works/source/work_img_'+ i +'.png')
@@ -28,7 +28,7 @@ block content
                         .slider__thumbs
                             - for (var i=1; i<=4; i++) {
                             .slider__thumbs-item(data-project='project_'+i)
-                                img(src='./assets/img/content/works/thumb/work_img_'+ i +'.png',alt='').slider__thumbs-img
+                                img(src='./assets/img/content/works/thumb/work_img_'+ i +'.png',alt='work').slider__thumbs-img
                             - }
                         .slider__controls-btn.slider__controls-btn_prev
                             +icon('arrow_down','slider__controls-arr')
@@ -44,7 +44,7 @@ block content
     section.reviews-section.section-blur
         .base-title.base-title_l
             +icon('about_header','base-title__bg-text')
-            .base-title__text Что обо мне<br> говорят
+            .base-title__text Что обо мне говорят
         .reviews
             ul.reviews__list
                 each object, name in reviews
@@ -55,7 +55,7 @@ block content
                             |Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
                         .reviews__person
                             .reviews__person-ava
-                                img(src=object['ava']).reviews__img
+                                img(src=object['ava'], alt=object['title']).reviews__img
                             .reviews__person-info
                                 .reviews__person-name= object['title']
                                 .reviews__person-occupation= object['occupation']

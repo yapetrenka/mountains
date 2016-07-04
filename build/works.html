@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Мои работы</title>
@@ -8,6 +8,12 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="./assets/css/foundation.css">
     <link rel="stylesheet" href="./assets/css/app.css"><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
@@ -58,7 +64,7 @@
           <div class="header__info">
             <div class="header__info-wrap">
               <div class="person person_light">
-                <div class="person__ava"><img src="./assets/img/content/ava.jpg" class="person__img"></div>
+                <div class="person__ava"><img src="./assets/img/content/ava.jpg" alt="Аватар" class="person__img"></div>
                 <div class="person__name">Петренко Ольга</div>
                 <div class="person__content">Личный сайт веб разработчика</div>
               </div>
@@ -69,12 +75,16 @@
                 <use xlink:href="./assets/img/icons/sprite.svg#arrow_down"></use>
               </svg></a></div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 100 100" preserveaspectratio="none" class="header__triangle header__triangle_left">
-          <polygon points="0,0  0,100  100,100"></polygon>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 100 100" preserveaspectratio="none" class="header__triangle header__triangle_right">
-          <polygon points="100,0  100,100 0,100"></polygon>
-        </svg>
+        <div class="header__triangle header__triangle_left">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 100 100" preserveaspectratio="none" class="header__triangle-svg">
+            <polygon points="0,0  0,100  100,100"></polygon>
+          </svg>
+        </div>
+        <div class="header__triangle header__triangle_right">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 100 100" preserveaspectratio="none" class="header__triangle-svg">
+            <polygon points="100,0  100,100 0,100"></polygon>
+          </svg>
+        </div>
       </header>
       <main class="main">
         <section class="works">
@@ -86,7 +96,7 @@
           </div>
           <section class="slider">
             <div class="slider__left">
-              <div class="slider__display"><img src="./assets/img/content/works/source/work_img_1.png" alt="" class="slider__display-img"></div>
+              <div class="slider__display"><img src="./assets/img/content/works/source/work_img_1.png" alt="work" class="slider__display-img"></div>
               <div class="slider__info">
                 <div data-project="project_1" data-img="./assets/img/content/works/source/work_img_1.png" class="slider__info-item active">
                   <div class="slider__info-title base-title">
@@ -134,10 +144,10 @@
               <div class="slider__controls">
                 <div data-direction="prev" class="slider__controls-item">
                   <div class="slider__thumbs">
-                    <div data-project="project_1" class="slider__thumbs-item"><img src="./assets/img/content/works/thumb/work_img_1.png" alt="" class="slider__thumbs-img"></div>
-                    <div data-project="project_2" class="slider__thumbs-item"><img src="./assets/img/content/works/thumb/work_img_2.png" alt="" class="slider__thumbs-img"></div>
-                    <div data-project="project_3" class="slider__thumbs-item"><img src="./assets/img/content/works/thumb/work_img_3.png" alt="" class="slider__thumbs-img"></div>
-                    <div data-project="project_4" class="slider__thumbs-item"><img src="./assets/img/content/works/thumb/work_img_4.png" alt="" class="slider__thumbs-img"></div>
+                    <div data-project="project_1" class="slider__thumbs-item"><img src="./assets/img/content/works/thumb/work_img_1.png" alt="work" class="slider__thumbs-img"></div>
+                    <div data-project="project_2" class="slider__thumbs-item"><img src="./assets/img/content/works/thumb/work_img_2.png" alt="work" class="slider__thumbs-img"></div>
+                    <div data-project="project_3" class="slider__thumbs-item"><img src="./assets/img/content/works/thumb/work_img_3.png" alt="work" class="slider__thumbs-img"></div>
+                    <div data-project="project_4" class="slider__thumbs-item"><img src="./assets/img/content/works/thumb/work_img_4.png" alt="work" class="slider__thumbs-img"></div>
                   </div>
                   <div class="slider__controls-btn slider__controls-btn_prev">
                     <svg class="icon svg-arrow_down-dims slider__controls-arr">
@@ -168,7 +178,7 @@
             <svg class="icon svg-about_header-dims base-title__bg-text">
               <use xlink:href="./assets/img/icons/sprite.svg#about_header"></use>
             </svg>
-            <div class="base-title__text">Что обо мне<br> говорят</div>
+            <div class="base-title__text">Что обо мне говорят</div>
           </div>
           <div class="reviews">
             <ul class="reviews__list">
@@ -180,7 +190,7 @@
                 </div>
                 <div class="reviews__text">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
                 <div class="reviews__person">
-                  <div class="reviews__person-ava"><img src="./assets/img/content/photo_dima.jpg" class="reviews__img"></div>
+                  <div class="reviews__person-ava"><img src="./assets/img/content/photo_dima.jpg" alt="Дмитрий Ковальчук" class="reviews__img"></div>
                   <div class="reviews__person-info">
                     <div class="reviews__person-name">Дмитрий Ковальчук</div>
                     <div class="reviews__person-occupation">основатель Loftschool</div>
@@ -195,7 +205,7 @@
                 </div>
                 <div class="reviews__text">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
                 <div class="reviews__person">
-                  <div class="reviews__person-ava"><img src="./assets/img/content/photo_zar.jpg" class="reviews__img"></div>
+                  <div class="reviews__person-ava"><img src="./assets/img/content/photo_zar.jpg" alt="Зар Захаров" class="reviews__img"></div>
                   <div class="reviews__person-info">
                     <div class="reviews__person-name">Зар Захаров</div>
                     <div class="reviews__person-occupation">главный преподаватель</div>

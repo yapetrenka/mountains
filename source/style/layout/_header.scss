@@ -48,25 +48,31 @@
     position: absolute;
     bottom: 0;
     width: 50%;
-    .works-page & {
-      fill: $bg-color-1;
-    }
-    .blog-page & {
-      fill: $light-color;
-    }
-    .about-page & {
-      fill: $bg-color-2;
-    }
     &_left {
       left: 0;
     }
     &_right {
       right: 0;
       .about-page & {
-        fill: $bg-color-3;
-        @include laptop {
-          fill: $bg-color-2;
+        .header__triangle-svg {
+          fill: $bg-color-3;
+          @include laptop {
+            fill: $bg-color-2;
+          }
         }
+      }
+    }
+    &-svg {
+      height: 100%;
+      width: 100%;
+      .works-page & {
+        fill: $bg-color-1;
+      }
+      .blog-page & {
+        fill: $light-color;
+      }
+      .about-page & {
+        fill: $bg-color-2;
       }
     }
   }

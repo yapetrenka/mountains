@@ -18,12 +18,14 @@ header.header.header_blog
             .header__info-wrap
                 .person
                     .person__ava
-                        img(src='./assets/img/content/ava.jpg').person__img
+                        img(src='./assets/img/content/ava.jpg', alt='Аватар').person__img
                 .base-title.base-title_l.base-title_light.base-title_blog
                     +icon('blog_header','base-title__bg-text')
                     h1.base-title__text Блог
                 .header__sub-title Статьи, которые я написала
-    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 100 100', preserveaspectratio='none').header__triangle.header__triangle_left
-        polygon(points='0,0  0,100  100,100')
-    svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 100 100', preserveaspectratio='none').header__triangle.header__triangle_right
-        polygon(points='100,0  100,100 0,100')
+    .header__triangle.header__triangle_left
+        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 100 100', preserveaspectratio='none').header__triangle-svg
+            polygon(points='0,0  0,100  100,100')
+    .header__triangle.header__triangle_right
+        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 100 100', preserveaspectratio='none').header__triangle-svg
+            polygon(points='100,0  100,100 0,100')

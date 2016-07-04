@@ -291,6 +291,13 @@ $(function(){
         return false;
     });
 
+    $(document).click(function(e){
+        if($(e.target).closest('.welcome').hasClass('flip')) return;
+        $('#auth_flip').removeClass('auth-top__btn_hidden');
+        $('.welcome').removeClass('flip');
+        e.stopPropagation();
+    });
+
     $(document).on('click', '#next_screen', function(){
         var scroll = $('.main').offset().top;
         $('body,html').animate({

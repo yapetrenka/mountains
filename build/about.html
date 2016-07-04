@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Обо мне</title>
@@ -8,6 +8,12 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="./assets/css/foundation.css">
     <link rel="stylesheet" href="./assets/css/app.css"><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
@@ -58,7 +64,7 @@
           <div class="header__info">
             <div class="header__info-wrap">
               <div class="person person_light">
-                <div class="person__ava"><img src="./assets/img/content/ava.jpg" class="person__img"></div>
+                <div class="person__ava"><img src="./assets/img/content/ava.jpg" alt="Аватар" class="person__img"></div>
                 <div class="person__name">Петренко Ольга</div>
                 <div class="person__content">Личный сайт веб разработчика</div>
               </div>
@@ -69,12 +75,16 @@
                 <use xlink:href="./assets/img/icons/sprite.svg#arrow_down"></use>
               </svg></a></div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 100 100" preserveaspectratio="none" class="header__triangle header__triangle_left">
-          <polygon points="0,0  0,100  100,100"></polygon>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 100 100" preserveaspectratio="none" class="header__triangle header__triangle_right">
-          <polygon points="100,0  100,100 0,100"></polygon>
-        </svg>
+        <div class="header__triangle header__triangle_left">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 100 100" preserveaspectratio="none" class="header__triangle-svg">
+            <polygon points="0,0  0,100  100,100"></polygon>
+          </svg>
+        </div>
+        <div class="header__triangle header__triangle_right">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 100 100" preserveaspectratio="none" class="header__triangle-svg">
+            <polygon points="100,0  100,100 0,100"></polygon>
+          </svg>
+        </div>
       </header>
       <main class="main">
         <section class="about">
@@ -88,7 +98,7 @@
               </div>
             </div>
             <div class="about__desc">
-              <div class="about__desc-img"><img src="./assets/img/content/my_photo.jpg"></div>
+              <div class="about__desc-img"><img src="./assets/img/content/my_photo.jpg" alt="Я"></div>
               <div class="base-title">
                 <div class="base-title__text">Кто я</div>
               </div>
@@ -102,7 +112,7 @@
             <div class="about__skills">
               <div class="about__skills-title">
                 <div class="base-title">
-                  <div class="base-title__text">Чем я могу быть<br> вам полезен</div>
+                  <div class="base-title__text">Чем я могу быть вам полезен</div>
                 </div>
               </div>
               <div class="about__skills-content">
