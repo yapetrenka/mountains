@@ -1,0 +1,17 @@
+.loader {
+  display: none;
+  background-color: rgba($light-color, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  &-bar {
+    background-color: $primary-color;
+    color: $light-color;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 20px;
+    width: 0;
+  }
+}

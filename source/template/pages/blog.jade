@@ -9,13 +9,13 @@ block content
                 ul.blog-nav__list
                     - for (var i=1; i<=4; i++) {
                     li.blog-nav__item
-                        a(href="#",class="blog-nav__link" + ( (i == 1) ? ' blog-nav__link_active' : '' ))= 'Приёмы в вёрстке, без которых не обходится сайт ' + [i]
+                        a(href="#post"+[i] ,class="blog-nav__link" + ( (i == 1) ? ' blog-nav__link_active' : '' ))= 'Приёмы в вёрстке, без которых не обходится сайт ' + [i]
                     - }
         .blog-section__right
             .blog
                 ul.blog__list
                     - for (var i=1; i<=4; i++) {
-                    li.blog__item
+                    li(data-id="post"+[i]).blog__item
                         .blog__title= 'Статья ' + [i]
                         .blog__date= '2' + [i] + ' июня 2016'
                         .blog__content.content

@@ -1,9 +1,12 @@
 .main-container {
-  display: flex;
+  display: none;
   flex-direction: column;
   min-height: 100vh;
   min-width: 320px;
   overflow: hidden;
+  &.loaded {
+    display: flex;
+  }
   &.one-screen {
     height: 100vh;
   }

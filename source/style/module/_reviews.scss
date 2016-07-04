@@ -1,13 +1,18 @@
 .reviews {
+  display: none;
   margin-bottom: $gutter*2;
   text-align: center;
   position: relative;
   padding: 0 $gutter;
   &-section {
     background: url("../img/skin/mountains_water.jpg") no-repeat 50% 0;
+    background-size: cover;
     @extend %clearfix;
-    .panel__blur {
-      background: url("../img/skin/mountains_water.jpg") no-repeat 50% -537px;
+    margin-bottom: -250px;
+    padding-bottom: 250px;
+    position: relative;
+    .panel-blur {
+        background-image: url("../img/skin/mountains_water.jpg");
     }
   }
   &__list {
@@ -72,4 +77,8 @@
       margin-bottom: 5px;
     }
   }
+}
+
+.feedback__form {
+  position: relative;
 }

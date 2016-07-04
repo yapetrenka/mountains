@@ -10,24 +10,38 @@ block content
         section.slider
             .slider__left
                 .slider__display
-                    img(src='./assets/img/content/work_img.png',alt='').slider__display-img
+                    img(src='./assets/img/content/works/source/work_img_1.png',alt='').slider__display-img
                 .slider__info
-                    .slider__info-title.base-title
-                        .base-title__text Сайт школы онлайн<br> образования
-                    .slider__info-skills html, css, javascript
-                    .slider__info-btn
-                        a(href="#").btn.btn_primary
-                            +icon('link','link__icon')
-                            | Посмотреть сайт
+                    - for (var i=1; i<=4; i++) {
+                    .slider__info-item(class=((i == 1) ? 'active' : ''), data-project='project_'+i, data-img='./assets/img/content/works/source/work_img_'+ i +'.png')
+                        .slider__info-title.base-title
+                            .base-title__text= "Сайт школы онлайн образования " + i
+                        .slider__info-skills html, css, javascript
+                        .slider__info-btn
+                            a(href="#").btn.btn_primary
+                                +icon('link','link__icon')
+                                | Посмотреть сайт
+                    - }
             .slider__right
                 .slider__controls
-                    a(href="#").slider__controls-item.slider__controls-item_prev
-                        img(src='./assets/img/content/work_img.png',alt='').slider__controls-img
-                        +icon('arrow_down','slider__controls-arr')
-                    a(href="#").slider__controls-item.slider__controls-item_next
-                        img(src='./assets/img/content/work_img.png',alt='').slider__controls-img
-                        +icon('arrow_down','slider__controls-arr')
-    section.reviews-section
+                    .slider__controls-item(data-direction="prev")
+                        .slider__thumbs
+                            - for (var i=1; i<=4; i++) {
+                            .slider__thumbs-item(data-project='project_'+i)
+                                img(src='./assets/img/content/works/thumb/work_img_'+ i +'.png',alt='').slider__thumbs-img
+                            - }
+                        .slider__controls-btn.slider__controls-btn_prev
+                            +icon('arrow_down','slider__controls-arr')
+                    .slider__controls-item(data-direction="next")
+                        .slider__thumbs
+                        //.slider__thumbs
+                            - for (var i=1; i<=4; i++) {
+                            .slider__thumbs-item(class=((i == 2) ? 'active' : ''), data-project='project_'+i)
+                                img(src='./assets/img/content/works/thumb/work_img_'+ i +'.png',alt='').slider__thumbs-img
+                            - }
+                        .slider__controls-btn.slider__controls-btn_next
+                            +icon('arrow_down','slider__controls-arr')
+    section.reviews-section.section-blur
         .base-title.base-title_l
             +icon('about_header','base-title__bg-text')
             .base-title__text Что обо мне<br> говорят
@@ -46,9 +60,9 @@ block content
                                 .reviews__person-name= object['title']
                                 .reviews__person-occupation= object['occupation']
         .feedback
-            form(action='',method='post',name='feedback').feedback__form
+            form(action='',method='post',name='feedback').feedback__form.ajax-form
                 .panel.panel_theme_blur
-                    .panel__blur
+                    .panel-blur
                     .panel__content
                         .panel__title
                             .base-title

@@ -1,11 +1,12 @@
 $blog-width: 1560;
 .blog-section {
   display: flex;
-  margin: $gutter*3 auto;
+  margin: 0 auto $gutter*3;
   max-width: $blog-width+px;
   &__left {
     flex: none;
     max-width: 28%;
+    padding-top: $gutter*3;
     width: 280px;
     @include tablets {
       margin: 0;
@@ -13,14 +14,16 @@ $blog-width: 1560;
     }
   }
   &__right {
+    padding-top: $gutter*3;
     margin: 0 (120/$blog-width)*100%;
     max-width: 980px;
   }
 }
 
 .blog-nav {
+  position: relative;
   text-align: right;
-  transition: (all .2s ease);
+  transition: (all .1s ease);
   @include tablets {
     background-color: $primary-color;
     box-shadow: 3px 0 3px rgba(#000, .2);
@@ -55,6 +58,16 @@ $blog-width: 1560;
       }
     }
   }
+  &__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all .5s ease;
+    @include tablets {
+      position: static;
+    }
+  }
   &__item {
     margin-bottom: $gutter/2;
   }
@@ -62,16 +75,18 @@ $blog-width: 1560;
     border-right: 3px solid transparent;
     display: block;
     color: $text-color;
+    font-weight: 500;
     line-height: 26px;
     padding: 8px $gutter;
     &_active,
     &:hover {
       border-color: $primary-color;
       color: $primary-color;
-      font-weight: 500;
     }
     @include tablets {
       color: rgba($light-color, .7);
+      margin-right: $gutter;
+      padding-right: 0;
       &_active,
       &:hover {
         color: $light-color;

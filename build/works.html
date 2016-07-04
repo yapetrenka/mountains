@@ -16,6 +16,10 @@
     <!--[if lt IE 7]>
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
     <![endif]-->
+    <div class="loader">
+      <div class="loader-bar"></div>
+      <div class="loader-images"></div>
+    </div>
     <div class="main-container inner-page works-page">
       <header class="header">
         <div class="header__wrap">
@@ -82,30 +86,84 @@
           </div>
           <section class="slider">
             <div class="slider__left">
-              <div class="slider__display"><img src="./assets/img/content/work_img.png" alt="" class="slider__display-img"></div>
+              <div class="slider__display"><img src="./assets/img/content/works/source/work_img_1.png" alt="" class="slider__display-img"></div>
               <div class="slider__info">
-                <div class="slider__info-title base-title">
-                  <div class="base-title__text">Сайт школы онлайн<br> образования</div>
+                <div data-project="project_1" data-img="./assets/img/content/works/source/work_img_1.png" class="slider__info-item active">
+                  <div class="slider__info-title base-title">
+                    <div class="base-title__text">Сайт школы онлайн образования 1</div>
+                  </div>
+                  <div class="slider__info-skills">html, css, javascript</div>
+                  <div class="slider__info-btn"><a href="#" class="btn btn_primary">
+                      <svg class="icon svg-link-dims link__icon">
+                        <use xlink:href="./assets/img/icons/sprite.svg#link"></use>
+                      </svg>Посмотреть сайт</a></div>
                 </div>
-                <div class="slider__info-skills">html, css, javascript</div>
-                <div class="slider__info-btn"><a href="#" class="btn btn_primary">
-                    <svg class="icon svg-link-dims link__icon">
-                      <use xlink:href="./assets/img/icons/sprite.svg#link"></use>
-                    </svg>Посмотреть сайт</a></div>
+                <div data-project="project_2" data-img="./assets/img/content/works/source/work_img_2.png" class="slider__info-item">
+                  <div class="slider__info-title base-title">
+                    <div class="base-title__text">Сайт школы онлайн образования 2</div>
+                  </div>
+                  <div class="slider__info-skills">html, css, javascript</div>
+                  <div class="slider__info-btn"><a href="#" class="btn btn_primary">
+                      <svg class="icon svg-link-dims link__icon">
+                        <use xlink:href="./assets/img/icons/sprite.svg#link"></use>
+                      </svg>Посмотреть сайт</a></div>
+                </div>
+                <div data-project="project_3" data-img="./assets/img/content/works/source/work_img_3.png" class="slider__info-item">
+                  <div class="slider__info-title base-title">
+                    <div class="base-title__text">Сайт школы онлайн образования 3</div>
+                  </div>
+                  <div class="slider__info-skills">html, css, javascript</div>
+                  <div class="slider__info-btn"><a href="#" class="btn btn_primary">
+                      <svg class="icon svg-link-dims link__icon">
+                        <use xlink:href="./assets/img/icons/sprite.svg#link"></use>
+                      </svg>Посмотреть сайт</a></div>
+                </div>
+                <div data-project="project_4" data-img="./assets/img/content/works/source/work_img_4.png" class="slider__info-item">
+                  <div class="slider__info-title base-title">
+                    <div class="base-title__text">Сайт школы онлайн образования 4</div>
+                  </div>
+                  <div class="slider__info-skills">html, css, javascript</div>
+                  <div class="slider__info-btn"><a href="#" class="btn btn_primary">
+                      <svg class="icon svg-link-dims link__icon">
+                        <use xlink:href="./assets/img/icons/sprite.svg#link"></use>
+                      </svg>Посмотреть сайт</a></div>
+                </div>
               </div>
             </div>
             <div class="slider__right">
-              <div class="slider__controls"><a href="#" class="slider__controls-item slider__controls-item_prev"><img src="./assets/img/content/work_img.png" alt="" class="slider__controls-img">
-                  <svg class="icon svg-arrow_down-dims slider__controls-arr">
-                    <use xlink:href="./assets/img/icons/sprite.svg#arrow_down"></use>
-                  </svg></a><a href="#" class="slider__controls-item slider__controls-item_next"><img src="./assets/img/content/work_img.png" alt="" class="slider__controls-img">
-                  <svg class="icon svg-arrow_down-dims slider__controls-arr">
-                    <use xlink:href="./assets/img/icons/sprite.svg#arrow_down"></use>
-                  </svg></a></div>
+              <div class="slider__controls">
+                <div data-direction="prev" class="slider__controls-item">
+                  <div class="slider__thumbs">
+                    <div data-project="project_1" class="slider__thumbs-item"><img src="./assets/img/content/works/thumb/work_img_1.png" alt="" class="slider__thumbs-img"></div>
+                    <div data-project="project_2" class="slider__thumbs-item"><img src="./assets/img/content/works/thumb/work_img_2.png" alt="" class="slider__thumbs-img"></div>
+                    <div data-project="project_3" class="slider__thumbs-item"><img src="./assets/img/content/works/thumb/work_img_3.png" alt="" class="slider__thumbs-img"></div>
+                    <div data-project="project_4" class="slider__thumbs-item"><img src="./assets/img/content/works/thumb/work_img_4.png" alt="" class="slider__thumbs-img"></div>
+                  </div>
+                  <div class="slider__controls-btn slider__controls-btn_prev">
+                    <svg class="icon svg-arrow_down-dims slider__controls-arr">
+                      <use xlink:href="./assets/img/icons/sprite.svg#arrow_down"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div data-direction="next" class="slider__controls-item">
+                  <div class="slider__thumbs"></div>
+                  <!--.slider__thumbs
+                  - for (var i=1; i<=4; i++) {
+                  .slider__thumbs-item(class=((i == 2) ? 'active' : ''), data-project='project_'+i)
+                      img(src='./assets/img/content/works/thumb/work_img_'+ i +'.png',alt='').slider__thumbs-img
+                  - }
+                  -->
+                  <div class="slider__controls-btn slider__controls-btn_next">
+                    <svg class="icon svg-arrow_down-dims slider__controls-arr">
+                      <use xlink:href="./assets/img/icons/sprite.svg#arrow_down"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </section>
-        <section class="reviews-section">
+        <section class="reviews-section section-blur">
           <div class="base-title base-title_l">
             <svg class="icon svg-about_header-dims base-title__bg-text">
               <use xlink:href="./assets/img/icons/sprite.svg#about_header"></use>
@@ -147,9 +205,9 @@
             </ul>
           </div>
           <div class="feedback">
-            <form action="" method="post" name="feedback" class="feedback__form">
+            <form action="" method="post" name="feedback" class="feedback__form ajax-form">
               <div class="panel panel_theme_blur">
-                <div class="panel__blur"></div>
+                <div class="panel-blur"></div>
                 <div class="panel__content">
                   <div class="panel__title">
                     <div class="base-title">
