@@ -2,3 +2,8 @@ mixin icon(name,mod)
     - mod = mod || ''
     svg(class="icon svg-" + name + '-dims ' + mod)
         use(xlink:href="./assets/img/icons/sprite.svg#" + name)
+
+mixin parallax(type)
+    .parallax(class="#{type}")
+        - for (var i = 0; i < 10; i++)
+            .parallax__layer(class="parallax__layer_" + i, data-depth=(0.1 * i))

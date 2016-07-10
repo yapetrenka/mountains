@@ -38,6 +38,7 @@
       //stroke-dasharray: 314px 314px;
       &_level {
         stroke: $primary-color;
+        transition: stroke-dasharray 1.5s ease;
       }
       @include desktop {
         stroke-width: 16px;

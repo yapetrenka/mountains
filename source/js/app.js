@@ -19,7 +19,6 @@ $(function(){
             if (background != 'none') {
                 var path = background.replace('url("', '').replace('")', '');
                 //console.log(path);
-
                 imgs.push(path);
             }
 
@@ -36,11 +35,10 @@ $(function(){
 
         for (var i= 0; i<imgs.length; i++) {
             var image = $('<img>', {
-                src : imgs[i],
-                height : 50
+                src : imgs[i]
             });
 
-            image.insertBefore('.loader-images');
+            //image.insertBefore('.preloader-images');
             //console.log(i + ' detected');
 
             image.load(function(){
@@ -55,16 +53,76 @@ $(function(){
 
             if (percent >= 100) {
                 $('.main-container').addClass('loaded');
+                $('.preloader').fadeOut('slow');
             }
 
-            $('.loader-bar').css({
+            /*$('.preloader-bar').css({
                 'width' : percent + '%'
-            }).text(percent + '%');
+            }).text(percent + '%');*/
+
+            $('.preloader__text').text(percent + '%');
         }
 
         //console.log(imgs.length);
         //console.log(imgs);
 
+    });
+
+
+    // ------------------------------
+    // Parallax
+    // ------------------------------
+
+    $(function(){
+
+        var layer = $('.parallax.mouse').find('.parallax__layer');
+
+        layer.map(function (key, value) {
+            var bottomPosition = ((window.innerHeight / 2) * (key / 100));
+            $(value).css({
+                'bottom': '-' + bottomPosition + 'px'
+            });
+        });
+
+        $(window).on('mousemove', function (e) {
+            var mouse_dx = (e.pageX);
+            var mouse_dy = (e.pageY);
+            var w = (window.innerWidth / 2) - mouse_dx;
+            var h = (window.innerHeight / 2) - mouse_dy;
+
+            layer.map(function (key, value) {
+                var bottomPosition = ((window.innerHeight / 2) * (key / 100));
+                var widthPosition = w * (key / 100);
+                var heightPosition = h * (key / 100);
+                $(value).css({
+                    'bottom': '-' + bottomPosition + 'px',
+                    'transform': 'translate3d(' + widthPosition + 'px, ' + heightPosition + 'px, 0)'
+                });
+            });
+        });
+
+    });
+
+    $(window).scroll(function(){
+        var wScroll = $(window).scrollTop();
+        (function(){
+            var
+                bg = $('.header__bg'),
+                sectionText = $('.header__bg-text'),
+                user = $('.header__info');
+            slideIt(bg, -wScroll / 30);
+            slideIt(sectionText, wScroll / 25);
+            slideIt(user, wScroll / 20);
+
+            function slideIt(block, strafeAmount) {
+                var strafe = -strafeAmount + '%',
+                    transormString = 'translate3d(0,' + strafe + ',0)';
+
+                block.css({
+                    'transform' : transormString
+                });
+            }
+        }());
     });
 
     // ------------------------------
@@ -311,6 +369,51 @@ $(function(){
             scrollTop: 0
         }, 'slow');
         return false;
+    });
+
+
+    // ------------------------------
+    // Animations
+    // ------------------------------
+    function onScrollInit( items, trigger ) {
+        items.each( function() {
+            var osElement = $(this),
+                osAnimationClass = osElement.attr('data-os-animation'),
+                osAnimationDelay = osElement.attr('data-os-animation-delay');
+
+            osElement.css({
+                '-webkit-animation-delay':  osAnimationDelay,
+                '-moz-animation-delay':     osAnimationDelay,
+                'animation-delay':          osAnimationDelay
+            });
+
+            var osTrigger = ( trigger ) ? trigger : osElement;
+
+            osTrigger.waypoint(function() {
+                osElement.addClass('animated').addClass(osAnimationClass);
+            },{
+                triggerOnce: true,
+                offset: '95%'
+            });
+        });
+    }
+
+    onScrollInit( $('.os-animation') );
+
+    $('.skill__circle-item_level').each(function(){
+        var $this = $(this);
+        var dashoffset = $this.data('dashoffset');
+        dashoffset = dashoffset+'% '+314+'%';
+        $this.waypoint(function(dir) {
+                if (dir === "down") {
+                    $this.css({
+                        'stroke-dasharray' : dashoffset
+                    });
+                }
+            },
+            {
+                offset: "95%"
+            });
     });
 
     // ------------------------------

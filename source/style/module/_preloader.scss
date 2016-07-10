@@ -1,0 +1,61 @@
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.preloader {
+  background: $primary-color url("../img/skin/mountains_preloader_bg.jpg") no-repeat 50% 0;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  &-bar {
+    background-color: $primary-color;
+    color: $light-color;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 20px;
+    width: 0;
+  }
+  &__percents {
+    @extend %centered-self;
+  }
+  &__text {
+    @extend %centered-self;
+    color: #fff;
+    text-align: center;
+    width: 80px;
+  }
+  &__circle {
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+    &_1 {
+      stroke-dasharray: 140px 1000px;
+      animation-duration: 1.5s;
+    }
+    &_2 {
+      stroke-dasharray: 110px 1000px;
+      animation-duration: 0.75s;
+    }
+    &_3 {
+      stroke-dasharray: 80px 1000px;
+      animation-duration: 0.5s;
+    }
+  }
+}

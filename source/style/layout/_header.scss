@@ -1,7 +1,6 @@
 .header {
-  background: url("../img/skin/mountains.jpg") no-repeat 50% 0;
-  background-size: cover;
   min-height: 100vh;
+  overflow: hidden;
   position: relative;
   &_blog {
     height: auto;
@@ -23,16 +22,30 @@
     padding: $gutter;
     position: relative;
   }
+  &__bg {
+    background: url("../img/skin/mountains.jpg") no-repeat 50% 0;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   &__bg-text {
-    @extend %centered-self;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     &-svg {
       fill: $light-color;
       opacity: .06;
+      @extend %centered-self;
     }
   }
   &__info {

@@ -22,13 +22,22 @@
     <!--[if lt IE 7]>
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
     <![endif]-->
-    <div class="loader">
-      <div class="loader-bar"></div>
-      <div class="loader-images"></div>
+    <div class="preloader">
+      <!--.preloader-bar-->
+      <!--.preloader-images-->
+      <div class="preloader__percents">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve" class="preloader__svg">
+          <circle opacity="0.4" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" enable-background="new" cx="72" cy="71.999" r="70" class="preloader__circle preloader__circle_1"></circle>
+          <circle opacity="0.7" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" enable-background="new" cx="72" cy="72" r="55" class="preloader__circle preloader__circle_2"></circle>
+          <circle opacity="0.9" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" cx="72" cy="72" r="40" class="preloader__circle preloader__circle_3"></circle>
+        </svg>
+        <div transform="matrix(1 0 0 1 51.5391 79.0127)" width="80px" fill="#FFFFFF" font-family="'Arial'" font-size="24" class="preloader__text">0%</div>
+      </div>
     </div>
     <div class="main-container inner-page works-page">
       <header class="header">
         <div class="header__wrap">
+          <div class="header__bg"></div>
           <div class="header__top">
             <div class="social social_light">
               <ul class="social__list">

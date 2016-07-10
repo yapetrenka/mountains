@@ -1,6 +1,6 @@
 .welcome-page {
-  background: url("../img/skin/mountains.jpg") no-repeat 50% 0;
-  background-size: cover;
+  /*background: url("../img/skin/mountains.jpg") no-repeat 50% 0;
+  background-size: cover;*/
   padding: $gutter;
   .main {
     display: flex;
@@ -14,6 +14,14 @@
 
 .welcome {
   margin: $gutter 0;
+  opacity: 0;
+  transition: all 2s ease 3s;
+  transform-origin: top center;
+  transform: perspective(800px) rotateX(-40deg);
+  .loaded & {
+    transform: perspective(0px) rotateX(0deg);
+    opacity: 1;
+  }
   &-social {
     margin-top: 35px;
     text-align: center;

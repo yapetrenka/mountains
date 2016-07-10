@@ -30,7 +30,7 @@ block content
                             Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
                 .skills
                     each object, name in skills
-                        .skills__item
+                        .skills__item.os-animation(data-os-animation="fadeInUp" data-os-animation-delay="0s")
                             .skills__title= name
                             .skills__list
                                 each name, val in skills
@@ -41,7 +41,7 @@ block content
                                                 // first date = percent * 314/100
                                                 -var percent = 75
                                                 -var level = percent*314/100
-                                                circle(transform="rotate(-90)",r="50%",cx="-50%",cy="50%",style="stroke-dasharray: "+ level +"% 314%;").skill__circle-item.skill__circle-item_level
+                                                circle(transform="rotate(-90)",r="50%",cx="-50%",cy="50%",data-dashoffset=level, style="stroke-dasharray: 0% 314%;").skill__circle-item.skill__circle-item_level
                                             .skill__title= val
                                 //.skills__list-item
                                     .skill

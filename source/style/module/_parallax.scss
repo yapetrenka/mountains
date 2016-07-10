@@ -1,0 +1,57 @@
+.parallax {
+  perspective: 100px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(0);
+  z-index: -1;
+  &__layer {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    bottom: -10%;
+    left: -10%;
+    transform: translate3d(0,0,0);
+    @for $i from 0 through 9 {
+      &_#{$i} {
+        background-image: url("../img/skin/mountains_parallax/layer_#{$i}.png");
+      }
+    }
+    /*&_0 {
+      transform: translateZ(-450px);
+    }
+    &_1 {
+      transform: translateZ(-400px);
+    }
+    &_2 {
+      transform: translateZ(-350px);
+    }
+    &_3 {
+      transform: translateZ(-300px);
+    }
+    &_4 {
+      transform: translateZ(-250px);
+    }
+    &_5 {
+      transform: translateZ(-200px);
+    }
+    &_6 {
+      transform: translateZ(-150px);
+    }
+    &_7 {
+      transform: translateZ(-100px);
+    }
+    &_8 {
+      transform: translateZ(-50px);
+    }
+    &_9 {
+      transform: translateZ(0);
+    }*/
+  }
+}
